@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account Verified</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f7f7f7; color: #333; padding: 0; margin: 0; }
+        .container { max-width: 600px; margin: 20px auto; padding: 30px; background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .header { border-bottom: 2px solid #007bff; padding-bottom: 15px; margin-bottom: 25px; }
+        .logo { text-align: center; margin-bottom: 15px; }
+        h1 { color: #007bff; font-size: 24px; font-weight: 600; }
+        .message { font-size: 16px; line-height: 1.6; color: #444; margin-bottom: 20px; }
+        .footer { margin-top: 40px; padding-top: 20px; font-size: 13px; color: #777; text-align: center; border-top: 1px solid #eee; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="logo"><span style="font-size: 26px; font-weight: bold; color: #007bff;">REG</span></div>
+        <h1>Account Verified</h1>
+    </div>
+
+    <p class="message" th:text="'Hello ' + ${username} + ','"></p>
+    <p class="message">Your account has been successfully verified. You can now enjoy full access to all banking features.</p>
+
+    <div class="footer">
+        <p>&copy; 2025 REG System. All rights reserved.</p>
+    </div>
+</div>
+</body>
+</html>
