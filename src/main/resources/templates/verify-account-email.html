@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Token Expiry Notification</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: white;
+            border-radius: 12px;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #0a84ff;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .message {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        .footer {
+            font-size: 13px;
+            color: #888;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .support {
+            color: #0a84ff;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Hello <span th:text="${username}">Customer</span>,</h2>
+    <div class="message">
+        <p th:text="${message}">
+            Your token is about to expire. Please buy a new one to stay powered.
+        </p>
+    </div>
+    <p class="footer">
+        This is an automated message from EUCL Prepaid System.<br>
+        For support, contact us at <span class="support" th:text="${supportEmail}">support@example.com</span>.<br>
+        &copy; <span th:text="${currentYear}">2025</span> EUCL All rights reserved.
+    </p>
+</div>
+</body>
+</html>
